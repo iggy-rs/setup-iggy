@@ -9,7 +9,7 @@ export async function setupBinary(version: string) {
   core.info(`Binary path is: ${binaryPath}`);
 
   core.addPath(binaryPath);
-  core.info(`iggy:${version} added to path`);
+  core.info(`iggy-server:${version} added to path`);
 
   core.setOutput("version", version);
 }
