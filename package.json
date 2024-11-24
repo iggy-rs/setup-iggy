@@ -2,6 +2,7 @@
   "name": "setup-iggy",
   "version": "0.1.0",
   "description": "A GitHub Action to install a specific version of Iggy server",
+  "private": true,
   "keywords": [
     "github-actions",
     "hashicorp",
