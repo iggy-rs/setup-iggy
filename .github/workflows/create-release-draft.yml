@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-  semantic-release:
+  release-draft:
     runs-on: ubuntu-latest
     permissions:
       contents: write
