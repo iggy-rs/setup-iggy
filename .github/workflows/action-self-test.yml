@@ -1,6 +1,8 @@
 name: "GitHub Action: Self-Test"
 on:
   pull_request:
+    paths:
+      - "src/**/.ts"
 
 jobs:
   setup-iggy:

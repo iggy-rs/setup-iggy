@@ -24,3 +24,11 @@ jobs:
       - name: Print iggy version
         run: iggy-server --version
 ```
+
+## Contributions
+
+Any pull request is welcome!
+
+### Maintainers
+
+Every pull request should be reviewed and merged. Once it's done, you can trigger a release at any time going to [releases](https://github.com/iggy-rs/setup-iggy/releases). A draft release is created and updated with new pull request. You can `edit` the release, then `publish` it. It will publish the release and create the adapted tag. It's done!
