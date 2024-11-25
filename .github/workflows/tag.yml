@@ -5,7 +5,7 @@ on:
       - "v*"
 
 jobs:
-  semantic-release:
+  create-changelog:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -19,7 +19,6 @@ jobs:
 
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
           token: ${{ steps.app-token.outputs.token }}
 
       - name: Update CHANGELOG

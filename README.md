@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup iggy
-        uses: "./"
+        uses: actions/setup-iggy-server@v1
         with:
           version: "0.4.72"
       - name: Print iggy version
