@@ -22,6 +22,6 @@ jobs:
       - name: Call script
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-        run: \
+        run: |
           chmod +x .github/update-labels.sh
           .github/update-labels.sh
