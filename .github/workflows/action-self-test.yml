@@ -1,6 +1,6 @@
 name: "GitHub Action: Self-Test"
 on:
-  push:
+  pull_request:
 
 jobs:
   setup-iggy:
