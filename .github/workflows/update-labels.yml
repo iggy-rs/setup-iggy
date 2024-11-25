@@ -1,6 +1,9 @@
 name: Update repository labels
 on:
   pull_request:
+    paths:
+      - ".github/workflows/uptdate-label.yml"
+      - ".github/update-labels.sh"
 
 jobs:
   checks:
