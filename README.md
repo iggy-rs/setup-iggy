@@ -20,7 +20,7 @@ jobs:
       - name: Setup iggy
         uses: "./"
         with:
-          version: "0.4.71"
+          version: "0.4.72"
       - name: Print iggy version
         run: iggy-server --version
 ```
