@@ -16,7 +16,7 @@
   "author": "Tchoupinax",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && ncc build --no-cache",
+    "build": "tsc && ncc build --no-cache --no-source-map-register",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "dependencies": {

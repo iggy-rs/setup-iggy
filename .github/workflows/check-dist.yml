@@ -32,6 +32,7 @@ jobs:
       - run: yarn build
 
       - name: Compare Directories
+        id: diff
         run: |
           if [ ! -d dist/ ]; then
             echo "Expected dist/ directory does not exist.  See status below:"
