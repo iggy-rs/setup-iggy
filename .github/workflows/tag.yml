@@ -17,6 +17,11 @@ jobs:
           app-id: ${{ secrets.DEPLOY_APP_ID }}
           private-key: ${{ secrets.DEPLOY_APP_KEY }}
 
+      - name: Update major tag to ${{ github.ref_name }}
+        uses: actions/publish-action@v0.3.0
+        with:
+          source-tag: ${{ github.ref_name }}
+
       - uses: actions/checkout@v4
         with:
           token: ${{ steps.app-token.outputs.token }}
