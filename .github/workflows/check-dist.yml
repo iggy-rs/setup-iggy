@@ -33,8 +33,6 @@ jobs:
 
       - name: Compare Directories
         run: |
-          [ ! -d dist/ ] && echo 1
-          [ -d dist/ ] && echo 2
           if [ ! -d dist/ ]; then
             echo "Expected dist/ directory does not exist.  See status below:"
             ls -la ./
