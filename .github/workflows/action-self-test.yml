@@ -1,4 +1,4 @@
-name: "GitHub Action: Self-Test"
+name: Self-Test
 on:
   pull_request:
     paths:
