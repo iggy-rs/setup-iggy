@@ -128,7 +128,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(7484));
 const binary_1 = __nccwpck_require__(2056);
-const DEFAULT_VERSION = "0.4.71";
+const DEFAULT_VERSION = "0.4.72";
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         let version = core.getInput("version", { required: false });
