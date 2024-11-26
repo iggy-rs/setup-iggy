@@ -2,7 +2,7 @@ import * as core from "@actions/core";
 
 import { setupBinary } from "./binary";
 
-const DEFAULT_VERSION = "0.4.71";
+const DEFAULT_VERSION = "0.4.70";
 
 async function main() {
   let version = core.getInput("version", { required: false });
