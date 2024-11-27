@@ -4,7 +4,11 @@ import { downloadTool, extractZip } from "@actions/tool-cache";
 export async function downloadFile(version: string): Promise<string> {
   const arch = "Linux-x86_64";
 
-  const binaryUrl = `https://github.com/iggy-rs/iggy/releases/download/server-${version}/${arch}.zip`;
+  let binaryUrl = `https://github.com/iggy-rs/iggy/releases/download/server-${version}/${arch}.zip`;
+  if (version === "latest") {
+    binaryUrl = `https://github.com/iggy-rs/iggy/releases/latest/download/${arch}.zip`;
+  }
+
   info(`Binary downloaded from ${binaryUrl}`);
 
   const pathToTarball = await downloadTool(binaryUrl);

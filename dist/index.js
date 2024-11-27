@@ -77,7 +77,10 @@ const tool_cache_1 = __nccwpck_require__(3472);
 function downloadFile(version) {
     return __awaiter(this, void 0, void 0, function* () {
         const arch = "Linux-x86_64";
-        const binaryUrl = `https://github.com/iggy-rs/iggy/releases/download/server-${version}/${arch}.zip`;
+        let binaryUrl = `https://github.com/iggy-rs/iggy/releases/download/server-${version}/${arch}.zip`;
+        if (version === "latest") {
+            binaryUrl = `https://github.com/iggy-rs/iggy/releases/latest/download/${arch}.zip`;
+        }
         (0, core_1.info)(`Binary downloaded from ${binaryUrl}`);
         const pathToTarball = yield (0, tool_cache_1.downloadTool)(binaryUrl);
         const pathToCLI = yield (0, tool_cache_1.extractZip)(pathToTarball);
@@ -128,7 +131,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(7484));
 const binary_1 = __nccwpck_require__(2056);
-const DEFAULT_VERSION = "0.4.72";
+const DEFAULT_VERSION = "latest";
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         let version = core.getInput("version", { required: false });
