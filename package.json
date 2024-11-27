@@ -4,8 +4,8 @@
   "private": true,
   "keywords": [
     "github-actions",
-    "hashicorp",
-    "nomad"
+    "iggy",
+    "server"
   ],
   "repository": {
     "type": "git",
@@ -20,17 +20,17 @@
   },
   "dependencies": {
     "@actions/core": "1.11.1",
-    "@actions/tool-cache": "^2.0.1"
+    "@actions/tool-cache": "2.0.1"
   },
   "devDependencies": {
-    "@types/node": "22.9.3",
+    "@types/node": "22.10.0",
     "@vercel/ncc": "0.38.3",
     "eslint": "9.15.0",
     "eslint-plugin-jsonc": "2.18.2",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-simple-import-sort": "12.1.1",
     "typescript": "5.6",
-    "typescript-eslint": "8.15.0",
-    "vite-node": "2.1.5"
+    "typescript-eslint": "8.16.0",
+    "vite-node": "2.1.6"
   }
 }

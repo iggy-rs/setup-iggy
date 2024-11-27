@@ -9,5 +9,6 @@ export async function downloadFile(version: string): Promise<string> {
 
   const pathToTarball = await downloadTool(binaryUrl);
   const pathToCLI = await extractZip(pathToTarball);
+
   return pathToCLI + `/all_artifacts/${arch}`;
 }
