@@ -30,6 +30,7 @@ jobs:
         uses: "./"
         with:
           version: "0.4.82"
+          autostart: false
 
       - name: Print $PATH for iggy
         run: which iggy-server
