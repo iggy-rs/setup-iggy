@@ -6,7 +6,7 @@ inputs:
   version:
     description: "The Iggy version to launch."
     required: false
-    default: "0.4.80"
+    default: "latest"
 outputs:
   version:
     description: "The Iggy version that was launched."
