@@ -7,6 +7,10 @@ inputs:
     description: "The Iggy version to launch."
     required: false
     default: "default"
+  autostart:
+    description: "Set to false if you do not want to start iggy server automatically"
+    required: false
+    default: "true"
 outputs:
   version:
     description: "The Iggy version that was launched."
