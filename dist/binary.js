@@ -34,7 +34,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.setupBinary = setupBinary;
 const core = __importStar(require("@actions/core"));
-const download_binary_1 = require("./functions/download-binary");
+const download_binary_1 = require("./download-binary");
 function setupBinary(version) {
     return __awaiter(this, void 0, void 0, function* () {
         core.info(`Installing iggy binary (${version})...`);

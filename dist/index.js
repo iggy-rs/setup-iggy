@@ -41,7 +41,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.setupBinary = setupBinary;
 const core = __importStar(__nccwpck_require__(7484));
-const download_binary_1 = __nccwpck_require__(9229);
+const download_binary_1 = __nccwpck_require__(8931);
 function setupBinary(version) {
     return __awaiter(this, void 0, void 0, function* () {
         core.info(`Installing iggy binary (${version})...`);
@@ -56,7 +56,7 @@ function setupBinary(version) {
 
 /***/ }),
 
-/***/ 9229:
+/***/ 8931:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
