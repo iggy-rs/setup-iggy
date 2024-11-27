@@ -1,4 +1,4 @@
-# GitHub Action: `setup-iggy`
+# `@iggy-rs/setup-iggy`
 
 <p>
   <a href="https://github.com/iggy-rs/setup-iggy/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/Tchoupinax/setup-iggy"></a>
@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup iggy
-        uses: actions/setup-iggy-server@v1
+        uses: iggy-rs/setup-iggy@v1
         with:
           version: "0.4.72"
       - name: Print iggy version
