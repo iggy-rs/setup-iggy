@@ -1,6 +1,7 @@
 name: Check Transpiled JavaScript
 on:
   pull_request:
+    types: [ready_for_review]
     branches:
       - main
     paths:

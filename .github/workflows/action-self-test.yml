@@ -1,6 +1,7 @@
 name: Self-Test
 on:
   pull_request:
+    types: [ready_for_review]
     paths:
       - "src/**/.ts"
 
