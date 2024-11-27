@@ -131,6 +131,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(7484));
 const binary_1 = __nccwpck_require__(2056);
+const start_server_1 = __nccwpck_require__(9053);
 const DEFAULT_VERSION = "latest";
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -138,9 +139,14 @@ function main() {
         if (version == null || version == "") {
             version = DEFAULT_VERSION;
         }
+        const autoStart = core.getBooleanInput("autostart", { required: false });
         try {
             core.info(`Installing iggy:${version} and adding it to GitHub Actions Path`);
             yield (0, binary_1.setupBinary)(version);
+            if (autoStart) {
+                core.info("Starting server...");
+                (0, start_server_1.startIggyServer)();
+            }
         }
         catch (error) {
             if (error instanceof Error) {
@@ -151,6 +157,47 @@ function main() {
 }
 main();
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 9053:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.startIggyServer = startIggyServer;
+const core = __importStar(__nccwpck_require__(7484));
+const child_process_1 = __nccwpck_require__(5317);
+function startIggyServer() {
+    const iggy = (0, child_process_1.spawn)("iggy-server", [], { detached: true, stdio: "ignore" });
+    iggy.unref();
+    core.info("Server started!");
+}
+//# sourceMappingURL=start-server.js.map
 
 /***/ }),
 
