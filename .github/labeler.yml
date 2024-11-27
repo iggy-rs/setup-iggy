@@ -40,6 +40,13 @@ labels:
         any:
           - "**/*.md"
 
+  - label: "manifest"
+    sync: true # remove label if match failed, default: false
+    matcher:
+      files:
+        any:
+          - "action.yml"
+
 checks:
   - context: "Ready to merge"
     description: "Disable merging when 'draft' label is set."
