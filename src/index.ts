@@ -13,10 +13,10 @@ async function main() {
 
   try {
     core.info(`Installing iggy:${version} and adding it to GitHub Actions Path`);
-
     await setupBinary(version);
 
-    await startIggyServer();
+    core.info("Starting server...");
+    startIggyServer();
   } catch (error) {
     if (error instanceof Error) {
       core.setFailed(error.message);
