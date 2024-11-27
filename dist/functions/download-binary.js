@@ -15,7 +15,10 @@ const tool_cache_1 = require("@actions/tool-cache");
 function downloadFile(version) {
     return __awaiter(this, void 0, void 0, function* () {
         const arch = "Linux-x86_64";
-        const binaryUrl = `https://github.com/iggy-rs/iggy/releases/download/server-${version}/${arch}.zip`;
+        let binaryUrl = `https://github.com/iggy-rs/iggy/releases/download/server-${version}/${arch}.zip`;
+        if (version === "latest") {
+            binaryUrl = `https://github.com/iggy-rs/iggy/releases/latest/download/${arch}.zip`;
+        }
         (0, core_1.info)(`Binary downloaded from ${binaryUrl}`);
         const pathToTarball = yield (0, tool_cache_1.downloadTool)(binaryUrl);
         const pathToCLI = yield (0, tool_cache_1.extractZip)(pathToTarball);
