@@ -17,6 +17,9 @@ jobs:
     steps:
       - name: Setup iggy
         uses: iggy-rs/setup-iggy@v1
+        # Iggy configuration — https://github.com/iggy-rs/setup-iggy/issues/14#issuecomment-2505922327
+        env:
+          IGGY_TCP_ADDRESS: "0.0.0.0:8090"
 ```
 
 ## Options
@@ -29,7 +32,7 @@ jobs:
 ## Description
 
 A GitHub Action to run iggy server
-<!-- action-docs-description source="action.yml" --> # applicable for actions only
+<!-- action-docs-description source="action.yml" -->
 
 <!-- action-docs-inputs source="action.yml" -->
 ## Inputs
@@ -52,7 +55,7 @@ A GitHub Action to run iggy server
 ## Runs
 
 This action is a `node20` action.
-<!-- action-docs-runs source="action.yml" --> # applicable for actions only
+<!-- action-docs-runs source="action.yml" -->
 
 ## Contributions
 
