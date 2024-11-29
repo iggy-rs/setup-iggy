@@ -16,6 +16,9 @@ categories:
   - title: "👷 Build System"
     labels:
       - "CI/CD"
+  - title: "📝 Documentation Changes"
+    labels:
+      - "docs"
 
 version-resolver:
   major:
