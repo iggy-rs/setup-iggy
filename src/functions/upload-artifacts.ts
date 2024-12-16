@@ -3,7 +3,7 @@ import * as core from "@actions/core";
 import fs from "node:fs";
 
 export async function uploadLogs() {
-  const path = "/tmp/setup-iggy/logs";
+  const path = `${process.env.GITHUB_WORKSPACE}/local_data/logs`;
   const files = fs.readdirSync(path);
   core.debug(`Files detected: ${files.join(",")}`);
 
