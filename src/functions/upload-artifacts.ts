@@ -9,7 +9,7 @@ export async function uploadLogs() {
   core.debug(`Files detected: ${files.join(",")}`);
 
   const { id, size } = await artifact.uploadArtifact(
-    "logs",
+    "iggy-server logs",
     files.map(file => `${path}/${file}`),
     process.cwd(),
     {
