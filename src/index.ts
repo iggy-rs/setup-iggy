@@ -20,8 +20,6 @@ async function main() {
       core.info("Starting server...");
       startIggyServer();
     }
-
-    throw new Error("fake");
   } catch (error) {
     if (error instanceof Error) {
       core.setFailed(error.message);
