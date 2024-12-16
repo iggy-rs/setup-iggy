@@ -1,7 +1,6 @@
 import * as core from "@actions/core";
 
 import { setupBinary } from "./binary";
-import { uploadLogs } from "./functions/upload-artifacts";
 import { startIggyServer } from "./start-server";
 
 const DEFAULT_VERSION = "latest";
@@ -22,14 +21,10 @@ async function main() {
       core.info("Starting server...");
       startIggyServer();
     }
-
-    throw new Error("fe");
   } catch (error) {
     if (error instanceof Error) {
       core.setFailed(error.message);
     }
-
-    uploadLogs();
   }
 }
 
