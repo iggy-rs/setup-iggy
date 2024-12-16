@@ -1,3 +1,7 @@
 import { uploadLogs } from "./functions/upload-artifacts";
 
-uploadLogs();
+async function main() {
+  await uploadLogs();
+}
+
+main();
