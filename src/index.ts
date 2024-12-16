@@ -11,7 +11,6 @@ async function main() {
     version = DEFAULT_VERSION;
   }
   const autoStart = core.getInput("autostart", { required: false });
-  console.log(autoStart);
 
   try {
     core.info(`Installing iggy:${version} and adding it to GitHub Actions Path`);
@@ -21,6 +20,8 @@ async function main() {
       core.info("Starting server...");
       startIggyServer();
     }
+
+    throw new Error("fake");
   } catch (error) {
     if (error instanceof Error) {
       core.setFailed(error.message);
