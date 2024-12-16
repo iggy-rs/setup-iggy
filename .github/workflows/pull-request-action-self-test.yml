@@ -31,7 +31,6 @@ jobs:
         with:
           version: "0.4.82"
           autostart: false
-          uploadLogs: "success()"
 
       - name: Print $PATH for iggy
         run: which iggy-server
