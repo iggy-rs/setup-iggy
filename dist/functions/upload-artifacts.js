@@ -48,10 +48,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.uploadLogs = uploadLogs;
 const artifact_1 = __importDefault(require("@actions/artifact"));
 const core = __importStar(require("@actions/core"));
+const node_fs_1 = __importDefault(require("node:fs"));
 function uploadLogs() {
     return __awaiter(this, void 0, void 0, function* () {
-        const filename = "local_data/logs/*";
-        const { id, size } = yield artifact_1.default.uploadArtifact("logs", [filename], process.cwd(), {
+        const path = `${process.env.GITHUB_WORKSPACE}/local_data/logs`;
+        const files = node_fs_1.default.readdirSync(path);
+        core.debug(`Files detected: ${files.join(",")}`);
+        const { id, size } = yield artifact_1.default.uploadArtifact("iggy-server logs", files.map(file => `${path}/${file}`), process.cwd(), {
             retentionDays: 10,
         });
         core.info(`Created artifact with id: ${id} (bytes: ${size}`);

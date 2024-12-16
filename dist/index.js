@@ -160,7 +160,6 @@ function main() {
             version = DEFAULT_VERSION;
         }
         const autoStart = core.getInput("autostart", { required: false });
-        console.log(autoStart);
         try {
             core.info(`Installing iggy:${version} and adding it to GitHub Actions Path`);
             yield (0, binary_1.setupBinary)(version);
