@@ -22,6 +22,10 @@ async function main() {
       core.info("Starting server...");
       startIggyServer();
     }
+
+    await new Promise(r => setTimeout(r, 1000));
+
+    throw new Error();
   } catch (error) {
     if (error instanceof Error) {
       core.setFailed(error.message);
