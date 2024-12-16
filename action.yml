@@ -11,10 +11,6 @@ inputs:
     description: "Set to false if you do not want to start iggy server automatically"
     required: false
     default: "true"
-  uploadLogs:
-    description: "Determine when logs should be uploaded — success() | failure()"
-    required: false
-    default: "failure()"
 outputs:
   version:
     description: "The Iggy version that was launched."
@@ -23,7 +19,7 @@ runs:
 
   main: "dist/index.js"
 
-  post-if: "github.event.inputs.uploadLogs"
+  post-if: "failure()"
   post: "dist/post.js"
 
 # https://actions-cool.github.io/github-action-branding
