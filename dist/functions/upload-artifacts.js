@@ -41,18 +41,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.setupBinary = setupBinary;
+exports.uploadLogs = uploadLogs;
+const artifact_1 = __importDefault(require("@actions/artifact"));
 const core = __importStar(require("@actions/core"));
-const download_binary_1 = require("./functions/download-binary");
-function setupBinary(version) {
+const node_fs_1 = __importDefault(require("node:fs"));
+function uploadLogs() {
     return __awaiter(this, void 0, void 0, function* () {
-        core.info(`Installing iggy binary (${version})...`);
-        const binaryPath = yield (0, download_binary_1.downloadFile)(version);
-        core.info(`Binary path is: ${binaryPath}`);
-        core.addPath(binaryPath);
-        core.info(`iggy-server:${version} added to path`);
-        core.setOutput("version", version);
+        const path = `${process.env.GITHUB_WORKSPACE}/local_data/logs`;
+        const files = node_fs_1.default.readdirSync(path);
+        core.debug(`Files detected: ${files.join(",")}`);
+        const { id, size } = yield artifact_1.default.uploadArtifact("iggy-server logs", files.map(file => `${path}/${file}`), process.cwd(), {
+            retentionDays: 10,
+        });
+        core.info(`Created artifact with id: ${id} (bytes: ${size}`);
     });
 }
-//# sourceMappingURL=binary.js.map
+//# sourceMappingURL=upload-artifacts.js.map

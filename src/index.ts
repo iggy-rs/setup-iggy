@@ -10,7 +10,7 @@ async function main() {
   if (version == null || version == "") {
     version = DEFAULT_VERSION;
   }
-  const autoStart = core.getBooleanInput("autostart", { required: false });
+  const autoStart = core.getInput("autostart", { required: false });
 
   try {
     core.info(`Installing iggy:${version} and adding it to GitHub Actions Path`);

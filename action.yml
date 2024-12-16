@@ -17,6 +17,9 @@ outputs:
 runs:
   using: "node20"
   main: "dist/index.js"
+  # post-if: "failure()" # TODO Improve later with conditional input
+  post: "dist/post.js"
+
 # https://actions-cool.github.io/github-action-branding
 branding:
   icon: "box"
