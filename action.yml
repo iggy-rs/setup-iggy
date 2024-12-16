@@ -16,8 +16,12 @@ outputs:
     description: "The Iggy version that was launched."
 runs:
   using: "node20"
+
   main: "dist/index.js"
+
+  post-if: "failure()"
   post: "dist/post.js"
+
 # https://actions-cool.github.io/github-action-branding
 branding:
   icon: "box"
