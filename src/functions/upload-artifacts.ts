@@ -3,16 +3,18 @@ import * as core from "@actions/core";
 import fs from "node:fs";
 
 export async function uploadLogs() {
-  const files = fs.readdirSync("/tmp/setup-iggy/logs");
+  const path = "/tmp/setup-iggy/logs";
+  const files = fs.readdirSync(path);
   core.debug(`Files detected: ${files.join(",")}`);
 
-  await Promise.all(
-    files.map(async filename => {
-      const { id, size } = await artifact.uploadArtifact("logs", [filename], process.cwd(), {
-        retentionDays: 10,
-      });
-
-      core.info(`Created artifact with id: ${id} (bytes: ${size}`);
-    }),
+  const { id, size } = await artifact.uploadArtifact(
+    "logs",
+    files.map(file => `${path}/${file}`),
+    process.cwd(),
+    {
+      retentionDays: 10,
+    },
   );
+
+  core.info(`Created artifact with id: ${id} (bytes: ${size}`);
 }
