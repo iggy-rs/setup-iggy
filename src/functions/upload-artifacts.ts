@@ -4,8 +4,9 @@ import fs from "node:fs";
 
 export async function uploadLogs() {
   const files = fs.readdirSync("/tmp/setup-iggy/logs");
+  core.debug(`Files detected: ${files.join(",")}`);
 
-  await Promise.allSettled(
+  await Promise.all(
     files.map(async filename => {
       const { id, size } = await artifact.uploadArtifact("logs", [filename], process.cwd(), {
         retentionDays: 10,
