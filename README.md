@@ -39,7 +39,7 @@ A GitHub Action to run iggy server
 
 | name | description | required | default |
 | --- | --- | --- | --- |
-| `version` | <p>The Iggy version to launch.</p> | `false` | `default` |
+| `version` | <p>The Iggy version to launch.</p> | `false` | `latest` |
 | `autostart` | <p>Set to false if you do not want to start iggy server automatically</p> | `false` | `true` |
 <!-- action-docs-inputs source="action.yml" -->
 
