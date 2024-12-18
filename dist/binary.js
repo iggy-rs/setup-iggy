@@ -55,4 +55,3 @@ function setupBinary(version) {
         core.setOutput("version", version);
     });
 }
-//# sourceMappingURL=binary.js.map

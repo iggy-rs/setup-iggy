@@ -62,7 +62,7 @@ function setupBinary(version) {
         core.setOutput("version", version);
     });
 }
-//# sourceMappingURL=binary.js.map
+
 
 /***/ }),
 
@@ -97,7 +97,7 @@ function downloadFile(version) {
         return pathToCLI + `/all_artifacts/${arch}`;
     });
 }
-//# sourceMappingURL=download-binary.js.map
+
 
 /***/ }),
 
@@ -176,7 +176,7 @@ function main() {
     });
 }
 main();
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -227,7 +227,7 @@ function startIggyServer() {
     iggy.unref();
     core.info("Server started!");
 }
-//# sourceMappingURL=start-server.js.map
+
 
 /***/ }),
 

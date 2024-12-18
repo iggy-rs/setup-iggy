@@ -60,4 +60,3 @@ function uploadLogs() {
         core.info(`Created artifact with id: ${id} (bytes: ${size}`);
     });
 }
-//# sourceMappingURL=upload-artifacts.js.map

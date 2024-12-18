@@ -16,4 +16,3 @@ function main() {
     });
 }
 main();
-//# sourceMappingURL=post.js.map

@@ -25,4 +25,3 @@ function downloadFile(version) {
         return pathToCLI + `/all_artifacts/${arch}`;
     });
 }
-//# sourceMappingURL=download-binary.js.map

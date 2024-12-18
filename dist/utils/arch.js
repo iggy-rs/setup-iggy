@@ -20,4 +20,3 @@ function getArch() {
             throw new Error(`Unsupported operating system architecture: ${arch}`);
     }
 }
-//# sourceMappingURL=arch.js.map

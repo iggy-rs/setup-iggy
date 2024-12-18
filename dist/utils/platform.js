@@ -22,4 +22,3 @@ function getPlatform() {
             throw new Error(`Unsupported operating system platform: ${platform}`);
     }
 }
-//# sourceMappingURL=platform.js.map

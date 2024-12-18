@@ -41,4 +41,3 @@ function startIggyServer() {
     iggy.unref();
     core.info("Server started!");
 }
-//# sourceMappingURL=start-server.js.map
