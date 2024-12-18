@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - "src/**/.ts"
+      - "package.json"
+      - "yarn.lock"
 
 jobs:
   setup-iggy:

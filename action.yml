@@ -16,9 +16,9 @@ outputs:
     description: "The Iggy version that was launched."
 runs:
   using: "node20"
-  main: "dist/index.js"
+  main: "dist/main/index.js"
   # post-if: "failure()" # TODO Improve later with conditional input
-  post: "dist/post.js"
+  post: "dist/post/index.js"
 
 # https://actions-cool.github.io/github-action-branding
 branding:

@@ -15,12 +15,14 @@
   "author": "Tchoupinax",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && ncc build --no-cache --no-source-map-register",
+    "build": "yarn build:main && yarn build:post",
+    "build:main": "ncc build --no-cache --no-source-map-register src/main/index.ts --out dist/main --minify",
+    "build:post": "ncc build --no-cache --no-source-map-register src/post/index.ts --out dist/post --minify",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "docs": "action-docs --update-readme"
   },
   "dependencies": {
-    "@actions/artifact": "2.1.11",
+    "@actions/artifact": "2.2.0",
     "@actions/core": "1.11.1",
     "@actions/tool-cache": "2.0.1"
   },

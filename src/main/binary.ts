@@ -1,6 +1,6 @@
 import * as core from "@actions/core";
 
-import { downloadFile } from "./functions/download-binary";
+import { downloadFile } from "../functions/download-binary";
 
 export async function setupBinary(version: string) {
   core.info(`Installing iggy binary (${version})...`);
