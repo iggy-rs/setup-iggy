@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.0] - 2024-12-18
+### :memo: Documentation Changes
+- [`cd08b26`](https://github.com/iggy-rs/setup-iggy/commit/cd08b261afa574671ac1f70d820ec10b20ac542a) - update CHANGELOG.md for v1.1.1 [skip ci] *(commit by [@Tchoupinax](https://github.com/Tchoupinax))*
+
+
 ## [v1.1.1] - 2024-12-16
 ### :construction_worker: Build System
 - [`df92226`](https://github.com/iggy-rs/setup-iggy/commit/df92226d374f467038e0b8707187b155813a015f) - bind documentation label *(PR [#21](https://github.com/iggy-rs/setup-iggy/pull/21) by [@Tchoupinax](https://github.com/Tchoupinax))*
@@ -54,3 +59,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v1.0.5]: https://github.com/iggy-rs/setup-iggy/compare/v1.0.4...v1.0.5
 [v1.1.0]: https://github.com/iggy-rs/setup-iggy/compare/v1.0.5...v1.1.0
 [v1.1.1]: https://github.com/iggy-rs/setup-iggy/compare/v1.1.0...v1.1.1
+[v1.2.0]: https://github.com/iggy-rs/setup-iggy/compare/v1.1.1...v1.2.0
