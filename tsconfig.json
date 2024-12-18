@@ -1,22 +1,15 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "declaration": false,
     "esModuleInterop": true,
-    "lib": [
-      "es6"
-    ],
     "module": "commonjs",
-    "moduleResolution": "node",
-    "noImplicitAny": false,
     "outDir": "./dist",
+    "pretty": true,
     "removeComments": true,
-    "rootDir": "./src",
+    "sourceMap": true,
     "strict": true,
     "target": "es6"
   },
   "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
+    "node_modules"
   ]
 }
