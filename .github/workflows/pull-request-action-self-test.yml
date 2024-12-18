@@ -48,6 +48,3 @@ jobs:
             exit 1
           fi
           echo "Version is correct: $VERSION"
-
-      - name: Print iggy version
-        run: rm -rf node_modules
