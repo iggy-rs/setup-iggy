@@ -1,4 +1,6 @@
-# `@iggy-rs/setup-iggy`
+# The source code has been moved to [Apache Iggy](https://github.com/apache/iggy/)
+
+## `@iggy-rs/setup-iggy`
 
 <p>
   <a href="https://github.com/iggy-rs/setup-iggy/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/iggy-rs/setup-iggy"></a>
